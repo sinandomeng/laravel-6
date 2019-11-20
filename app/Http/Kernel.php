@@ -21,7 +21,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
 
         // Force Https Middleware
-        \App\Http\Middleware\ForceHttpsProtocol::class,
+        // \App\Http\Middleware\ForceHttpsProtocol::class,
     ];
 
     /**
