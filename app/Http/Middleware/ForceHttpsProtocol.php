@@ -15,7 +15,7 @@ class ForceHttpsProtocol
      */
     public function handle($request, Closure $next)
     {
-        if (!$request->secure() && strpos(env('APP_URL'), 'herokuapp') !== false) {
+        if (!$request->secure() && env('APP_ENV') === 'production') {
             return redirect()->secure($request->getRequestUri());
         }
 
